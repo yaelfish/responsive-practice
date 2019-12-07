@@ -13,6 +13,9 @@
 
     <header class="main-header flex space-between align-center">
         <a class="logo main-logo" href="#">Blogin<span>.</span></a>
+        <div class="nav-icon" onclick="toggleMenu()">
+            <div></div>
+        </div>
         <nav class="main-nav">
             <ul class="main-nav-ul clean-list flex">
                 <li>
@@ -106,5 +109,11 @@
             <a class="flex align-center justify-center" href="#"><img src="./img/dribble.png" alt="dribble-icon"></a>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
 </body>
 </html>

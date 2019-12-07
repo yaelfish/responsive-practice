@@ -67,7 +67,7 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     cursor: pointer;
     transition: opacity .6s;
 }
@@ -324,9 +324,9 @@ a.main-logo span {
 
 /* Media Queries */
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
     html {
-        font-size: 15px;
+        font-size: 14px;
     }
     .main-header {
         padding-left: 210px;
@@ -335,5 +335,172 @@ a.main-logo span {
     .main-container {
         padding-left: 210px;
         padding-right: 210px;
+    }
+}
+
+@media (max-width: 1350px) {
+    p {
+        margin: 0 0 1.05rem;
+    }
+    .img-post {
+        max-width: 400px;
+    }
+    .post-title {
+        margin-bottom: 1.725rem;
+    }
+}
+
+@media (max-width: 1260px) {
+    h2 {
+        font-size: 1.55rem;
+    }
+    .img-post {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .main-header {
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+    .main-container {
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+    .main-nav-ul>* a {
+        width: 110px;
+    }
+    .main-container {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+    .img-post {
+        max-width: 277px;
+    }
+    .post-title {
+        margin-bottom: 0.725rem;
+    }
+}
+
+@media (max-width: 988px) {
+    .nav-icon {
+        margin: 20px;
+        width: 40px;
+        cursor: pointer;
+    }
+    .nav-icon:after, .nav-icon:before, .nav-icon div {
+        background-color: #fff;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: all .2s ease-in-out;
+    }
+    .nav-icon:hover:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+    .nav-icon:hover:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+    .nav-icon:hover div {
+        transform: scale(0);
+    }
+    .menu-open .nav-icon {
+        position: fixed;
+    }
+    .menu-open .nav-icon div {
+        transform: scale(0);
+    }
+    .menu-open .nav-icon:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+    .menu-open .nav-icon:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+    .main-nav {
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.9);
+        border-left: 1px solid #c3c3c3;
+        width: 270px;
+        transform: translate(100%, 0);
+        transition: transform .6s;
+    }
+    .menu-open .main-nav {
+        transform: translate(0, 0);
+    }
+    .main-nav>* {
+        width: 100%;
+        border-bottom: 1px solid #ececec;
+        text-align: center;
+    }
+    .main-nav>*:not(:first-child) {
+        margin-left: 0;
+    }
+    .main-nav a {
+        display: block;
+        padding: 16px 0;
+    }
+    .main-nav-ul>*:hover {
+        border-bottom: none;
+    }
+    .main-nav-ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(20, 20, 20, 0.9);
+        font-size: 1.5rem;
+    }
+    .posts-container {
+        padding-top: 60px;
+        padding-right: 0;
+    }
+    .post-container {
+        width: 84%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .post {
+        margin-bottom: 50px;
+    }
+    .post-title {
+        font-size: 1.85rem;
+    }
+    .post-text {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .img-post {
+        margin-right: 0;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    button.continue-read {
+        font-size: 1.2rem;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 770px) {
+    .main-header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .main-container {
+        padding: 0;
+    }
+    .main-footer small {
+        line-height: 2.05;
+        max-width: 90%;
+        text-align: center;
     }
 }
