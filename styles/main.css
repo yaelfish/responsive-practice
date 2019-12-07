@@ -108,6 +108,11 @@ a {
     opacity: 1;
 }
 
+.reading-open .nav-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .reading-open .read-modal {
     visibility: visible;
     opacity: 1;
@@ -625,5 +630,9 @@ a.main-logo span {
         border-radius: 0;
         height: 100vh;
         padding-top: 32%;
+    }
+    .close {
+        right: 4%;
+        top: 5%;
     }
 }
