@@ -77,6 +77,109 @@ a {
     opacity: 1;
 }
 
+/* Modal continue reading */
+
+.read-modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 33%;
+    top: 25%;
+    width: 38%;
+    border-radius: 15px;
+    height: 44%;
+    padding: 18px;
+    background: rgb(253, 253, 253, 0.93);
+    border: 1px solid #4f4e4e;
+    transition: opacity .6s;
+    text-align: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    padding-top: 48px;
+}
+
+.reading-open .screen {
+    background: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    opacity: 1;
+}
+
+.reading-open .read-modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+input[name="email"] {
+    border: 2px solid #c2c2c2;
+    padding: 13px 25px 12px 26px;
+    font-family: 'latorbold';
+    border-radius: 20px;
+    background-color: #ffffff;
+    line-height: 1.11;
+    font-size: 1rem;
+    transition: .5s;
+    cursor: pointer;
+    margin-bottom: 13px;
+}
+
+input[name="email"]::placeholder {
+    color: #c2c1c1;
+}
+
+.submit {
+    border: 2px solid #58c93a;
+    color: #606060;
+    padding: 13px 25px 12px 26px;
+    font-family: 'latorbold';
+    border-radius: 20px;
+    background-color: #ffffff;
+    line-height: 1.11;
+    font-size: 1rem;
+    transition: .5s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit:hover {
+    background-color: rgba(88, 201, 58, 0.7);
+    color: #292929;
+    border-color: #292929;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 18px;
+    width: 28px;
+    height: 28px;
+    opacity: 0.4;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
 /* Helpers */
 
 .responsive {
@@ -384,10 +487,26 @@ a.main-logo span {
 }
 
 @media (max-width: 988px) {
+    .read-modal {
+        left: 0;
+        top: 21%;
+        width: 100vw;
+        border-radius: 0;
+        height: 80vh;
+        padding-top: 5%;
+    }
+    .modal {
+        padding-top: 8%;
+        width: 68%;
+        margin: auto;
+    }
     .nav-icon {
-        margin: 20px;
+        margin: 20px 0;
         width: 30px;
         cursor: pointer;
+        position: fixed;
+        right: 55px;
+        top: 30px;
     }
     .nav-icon:after, .nav-icon:before, .nav-icon div {
         background-color: #fff;
@@ -409,28 +528,19 @@ a.main-logo span {
     }
     .menu-open .nav-icon {
         position: fixed;
-        left: 10px;
-        top: 10px;
-    }
-    .menu-open .nav-icon div {
-        transform: scale(0);
-    }
-    .menu-open .nav-icon:before {
-        transform: translateY(12px) rotate(135deg);
-    }
-    .menu-open .nav-icon:after {
-        transform: translateY(-12px) rotate(-135deg);
+        right: 50px;
+        top: 24px;
     }
     .main-nav {
         flex-direction: column;
         position: fixed;
         right: 0;
-        top: 0;
+        top: 20%;
         height: 100vh;
         background: rgba(255, 255, 255, 0.9);
         border-left: 1px solid #c3c3c3;
-        width: 270px;
-        transform: translate(100%, 0);
+        width: 100vw;
+        transform: translate(80%, 100%);
         transition: transform .6s;
     }
     .menu-open .main-nav {
@@ -451,10 +561,13 @@ a.main-logo span {
     .main-nav-ul>*:hover {
         border-bottom: none;
     }
+    .main-nav-ul>*.active {
+        border-bottom: none;
+    }
     .main-nav-ul {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-top: 30px;
         align-items: center;
         background-color: rgba(20, 20, 20, 0.9);
         font-size: 1.5rem;
@@ -504,5 +617,13 @@ a.main-logo span {
         line-height: 2.05;
         max-width: 90%;
         text-align: center;
+    }
+    .read-modal {
+        left: 0;
+        top: 0;
+        width: 100vw;
+        border-radius: 0;
+        height: 100vh;
+        padding-top: 32%;
     }
 }
