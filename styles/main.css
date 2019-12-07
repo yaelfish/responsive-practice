@@ -631,6 +631,15 @@ a.main-logo span {
         height: 100vh;
         padding-top: 32%;
     }
+    .modal .post-title {
+        margin-bottom: 25px;
+    }
+    input[name="email"] {
+        font-size: 1.3rem;
+    }
+    .submit {
+        font-size: 1.3rem;
+    }
     .close {
         right: 4%;
         top: 5%;
