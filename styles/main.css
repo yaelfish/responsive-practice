@@ -91,7 +91,7 @@ a {
     padding: 18px;
     background: rgb(253, 253, 253, 0.93);
     border: 1px solid #4f4e4e;
-    transition: opacity .6s;
+    transition: .8s;
     text-align: center;
 }
 
